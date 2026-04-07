@@ -1,0 +1,47 @@
+1.  SQL vs NoSQL
+
+SQL: - Structured data (tables, rows, columns) - Fixed schema - Uses SQL
+language - Vertical scaling - Examples: MySQL, PostgreSQL
+
+NoSQL: - Unstructured/semi-structured data - Flexible schema - JSON-like
+queries - Horizontal scaling - Examples: MongoDB, Cassandra
+
+
+
+2.  CAP Theorem
+
+CAP = Consistency, Availability, Partition Tolerance
+
+-   Consistency: Same data on all nodes
+-   Availability: Every request gets response
+-   Partition Tolerance: Works despite network failure
+
+Only 2 out of 3 can be guaranteed: - CP (Consistency + Partition) - AP
+(Availability + Partition)
+
+
+
+3.  When MongoDB is Preferred
+
+4.  Flexible schema (dynamic data)
+
+5.  High traffic / big data apps
+
+6.  Fast development (startups, MVPs)
+
+
+
+4.  Why BSON instead of JSON
+
+-   Faster processing (binary format)
+-   Supports more data types (Date, ObjectId, Binary)
+-   Efficient storage
+
+
+5.  MongoDB Query
+
+Find students with GPA > 3.5 and course = CS101:
+
+db.students.find({ GPA: { $gt: 3.5 }, course: “CS101” })
+
+------------------------------------------------------------------------
